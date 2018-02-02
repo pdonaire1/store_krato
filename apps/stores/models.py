@@ -13,6 +13,7 @@ class Store(models.Model):
     Class created for stores
     """
     name = models.CharField(max_length=80)
+    city = models.ForeignKey(City)
 
     def __str__(self):
         return str(self.name) + ' - ' + str(self.id)
@@ -25,7 +26,6 @@ class UserStore(models.Model):
     """
     store = models.ForeignKey(Store)
     user = models.ForeignKey(User)
-    city = models.ForeignKey(City)
 
     def __str__(self):
-        return str(self.name) + ' - ' + str(self.id)
+        return str(self.store) + ' | ' + str(self.user)
