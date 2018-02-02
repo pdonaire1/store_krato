@@ -1,7 +1,6 @@
 *.pyc
 *.py~
-*.sqlite3
-db.sqlite3
+
 venv
 *.pyc
 staticfiles
